@@ -1018,6 +1018,12 @@ footer a:hover {
   background: #13151a;
 }
 
+.video-thumb-container.short {
+   aspect-ratio: 9 / 16;
+   max-width: 16rem;
+   margin-inline: auto;
+ }
+
 .video-thumb {
   width: 100%;
   height: 100%;
@@ -1026,9 +1032,28 @@ footer a:hover {
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.video-thumb.short {
+  object-fit: contain;
+}
+
 .video-card:hover .video-thumb {
   transform: scale(1.04);
   filter: brightness(1.06);
+}
+
+.video-card:hover .video-thumb.short {
+  transform: none;
+}
+
+.channel-latest-row {
+  margin-top: 2rem;
+}
+
+.channel-latest-heading {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-family: var(--font-cinzel);
+  font-size: 1.25rem;
 }
 
 .video-thumb-overlay {
